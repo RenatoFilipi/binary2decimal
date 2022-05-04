@@ -3,12 +3,25 @@ import type { NextPage } from "next";
 import { useState } from "react";
 
 const Home: NextPage = () => {
-  const [input, setInput] = useState("");
-  const [result, setResult] = useState("result here");
+  const [binaryText, setBinaryText] = useState("");
+  const [resultText, setResultText] = useState("result here");
+  const [success, setSuccess] = useState(true);
+
+  const CheckBinary = (str: string) => {
+    const binaryRegex = /^[0-1]{1,}$/g;
+    return binaryRegex.test(str);
+  };
 
   const BinConvert = () => {
-    const dec = parseInt(input, 2);
-    setResult(dec.toString());
+    const result = CheckBinary(binaryText);
+    if (!result) {
+      setResultText("is not a binary");
+      setSuccess(false);
+    } else {
+      const decimal = parseInt(binaryText, 2);
+      setResultText(decimal.toString());
+      setSuccess(true);
+    }
   };
 
   return (
@@ -21,11 +34,11 @@ const Home: NextPage = () => {
         <div className="flex flex-col gap-3">
           <input
             type="text"
-            id="input"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            id="binary_text"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-qs"
             placeholder="Enter 0 or 1"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={binaryText}
+            onChange={(e) => setBinaryText(e.target.value)}
             required
           ></input>
           <button
@@ -35,7 +48,13 @@ const Home: NextPage = () => {
             Convert
           </button>
           <div className="flex justify-center">
-            <p>{result}</p>
+            <p
+              className={
+                "font-qs " + (success ? "text-gray-800" : "text-red-500")
+              }
+            >
+              {resultText}
+            </p>
           </div>
         </div>
       </div>
