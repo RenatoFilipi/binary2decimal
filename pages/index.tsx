@@ -1,3 +1,4 @@
+import About from "../components/About";
 import Head from "next/head";
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
         <title>binary to decimal</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="flex h-screen w-screen justify-center items-center flex-col">
+      <div className="flex h-screen justify-center items-center flex-col">
         <div className="m-14">
           <h1 className="font-qs text-gray-800 font-semibold text-5xl text-center">
             Binary to Decimal converter
@@ -123,6 +124,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <About />
     </>
   );
 };
