@@ -1,4 +1,5 @@
 import About from "../components/About";
+import Footer from "../components/Footer";
 import Head from "next/head";
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -125,6 +126,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <About />
+      <Footer />
     </>
   );
 };

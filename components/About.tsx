@@ -6,7 +6,7 @@ const About = () => {
           <h2 className="font-qs text-gray-800 font-bold text-5xl mb-16">
             Concepts
           </h2>
-          <div className="flex flex-col gap-28">
+          <div className="flex flex-col gap-12 divide-y-2">
             <div>
               <h3 className="font-qs text-gray-800 font-bold text-3xl mb-8">
                 Binary
@@ -31,7 +31,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="pt-12">
               <h3 className="font-qs text-gray-800 font-bold text-3xl mb-8">
                 Decimal
               </h3>
@@ -57,7 +57,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="pt-12">
               <h3 className="font-qs text-gray-800 font-bold text-3xl mb-8">
                 Binary to Decimal Conversion
               </h3>
@@ -80,7 +80,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="pt-12">
               <h3 className="font-qs text-gray-800 font-bold text-3xl mb-8">
                 Binary to Decimal Conversion Formula
               </h3>
