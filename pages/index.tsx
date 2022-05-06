@@ -29,7 +29,7 @@ const Home: NextPage = () => {
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
-    }, 5000);
+    }, 4000);
   };
 
   return (
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex h-screen w-screen justify-center items-center flex-col">
         <div className="m-14">
-          <h1 className="font-qs text-gray-800 font-semibold text-5xl">
+          <h1 className="font-qs text-gray-800 font-semibold text-5xl text-center">
             Binary to decimal converter
           </h1>
         </div>
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-500"
+                  className="h-5 w-5 text-gray-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
                 </svg>
               )}
               <span className="font-qs text-gray-800 text-base">
-                Copy to clipboard
+                {isCopied ? "Copied" : "Copy to clipboard"}
               </span>
             </button>
           </div>
