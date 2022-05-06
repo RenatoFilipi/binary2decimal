@@ -41,7 +41,7 @@ const Home: NextPage = () => {
       <div className="flex h-screen w-screen justify-center items-center flex-col">
         <div className="m-14">
           <h1 className="font-qs text-gray-800 font-semibold text-5xl text-center">
-            Binary to decimal converter
+            Binary to Decimal converter
           </h1>
         </div>
         <div className="flex flex-col gap-3 w-80">
