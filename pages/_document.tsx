@@ -6,7 +6,7 @@ const Document = () => {
       <Head>
         <meta
           name="description"
-          content="This is a Binary to Decimal converter website."
+          content="This is a Binary to Decimal converter website. Where you can convert Binary to decimal numbers. Contains the concepts behind Binary and Decimal and the convertion formula."
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
