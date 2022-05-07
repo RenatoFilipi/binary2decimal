@@ -2,7 +2,7 @@ const About = () => {
   return (
     <>
       <div className="block">
-        <div className="flex flex-col m-24">
+        <div className="flex flex-col m-12 lg:m-24">
           <h2 className="font-qs text-gray-800 font-bold text-5xl mb-16">
             Concepts
           </h2>
