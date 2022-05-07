@@ -1,3 +1,5 @@
+import CookieConsent, { Cookies } from "react-cookie-consent";
+
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Head from "next/head";
@@ -125,6 +127,20 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <CookieConsent
+        cookieName="Bin2DecCookieConsent"
+        overlay
+        style={{ background: "#1e293b", fontFamily: "Quicksand" }}
+        buttonStyle={{
+          fontWeight: "bold",
+          fontFamily: "Quicksand",
+          background: "white",
+          borderRadius: "0.5rem",
+          padding: "0.625rem",
+        }}
+      >
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
       <About />
       <Footer />
     </>
