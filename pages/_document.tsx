@@ -4,11 +4,6 @@ const Document = () => {
   return (
     <Html lang="en">
       <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3616353029762472"
-          crossOrigin="anonymous"
-        ></script>
         <meta
           name="description"
           content="This is a Binary to Decimal converter website. Where you can convert Binary to decimal numbers. Contains the concepts behind Binary and Decimal and the convertion formula."
