@@ -8,21 +8,22 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       {/* Google Analytics */}
       <Script
-        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        strategy="afterInteractive"
       />
-      <Script strategy="lazyOnload" id="google-analytics-script">
-        {`  window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+      <Script strategy="afterInteractive" id="google-analytics-script">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-            `}
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          `}
       </Script>
       {/* Google Adsense */}
       <Script
         id="Adsense-id"
-        data-ad-client={`${process.env.NEXT_PUBLIC_GOOGLE_CA_PUB}`}
+        data-ad-client="ca-pub-3616353029762472"
         async
         strategy="afterInteractive"
         onError={(e) => {
@@ -32,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         crossOrigin="anonymous"
       />
       {/* My Pages */}
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
